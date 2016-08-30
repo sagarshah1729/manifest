@@ -563,4 +563,5 @@
   <project name="Zephyr-OS/platform_frameworks_native" path="frameworks/native" remote="github" revision="zos6.0.1" />
   <project name="Zephyr-OS/platform_external_sepolicy" path="external/sepolicy" remote="github" revision="zos6.0.1" />
   <project name="Zephyr-OS/platform_bionic" path="bionic" remote="github" revision="zos6.0.1" />
+  <project name="Zephyr-OS/platform_packages_apps_LockClock" path="packages/apps/LockClock" remote="github" revision="zos6.0.1" />
 </manifest>
