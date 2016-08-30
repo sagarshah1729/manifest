@@ -66,7 +66,7 @@
   <project path="packages/providers/DownloadProvider" name="platform_packages_providers_DownloadProvider" remote="rro" />
   <project name="Zephyr-OS/manifest" path="manifest" remote="github" revision="zos6.0.1" />
   
-<!-- CyanogenMod -->
+  <!-- CyanogenMod -->
   <project name="CyanogenMod/android_device_qcom_common" path="device/qcom/common" remote="github" revision="cm-13.0" />
   <project name="CyanogenMod/android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="github" revision="cm-13.0" />
   <project path="development" name="CyanogenMod/android_development" groups="pdk-cw-fs,pdk-fs" remote="github" revision="cm-13.0" />
@@ -155,6 +155,7 @@
   <project path="external/libnetfilter_conntrack" name="CyanogenMod/android_external_libnetfilter_conntrack" remote="github" revision="cm-13.0" /> 
   <project path="external/libnfnetlink" name="CyanogenMod/android_external_libnfnetlink" remote="github" revision="cm-13.0" /> 
   <project path="packages/apps/FMRadio" name="CyanogenMod/android_packages_apps_FMRadio" remote="github" revision="cm-13.0" />
+  <project path="packages/apps/LockClock" name="CyanogenMod/android_packages_apps_LockClock" remote="github" revision="cm-13.0" />
 
 <!-- AOSP -->
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
