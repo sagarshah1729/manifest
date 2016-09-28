@@ -1,0 +1,21 @@
+<img src="https://raw.githubusercontent.com/Zephyr-OS/manifest/zos6.0.1/zephyrOS-logo.png">
+
+ZephyrOS Nougat [WIP] 
+===========
+
+This rom is based on the AOSP-RRO project and thanks to that team
+
+Download the Zephyr-OS source with this link
+````bash
+repo init -u git://github.com/Zephyr-OS/manifest.git -b zephyr-N
+````
+Then to sync up: 
+````bash 
+repo sync 
+``` 
+Finally to build: 
+````bash 
+. build/envsetup.sh
+brunch device
+```
+

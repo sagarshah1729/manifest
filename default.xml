@@ -10,12 +10,15 @@
   <remote  name="rro"
            fetch="https://github.com/AOSP-RRO"
 	   revision="nougat" />
-	   
+  <remote  name="zephyr"
+	   fetch="https://github.com/Zephyr-OS"
+           revision="zephyr-N" />
+
   <default revision="refs/tags/android-7.0.0_r6"
            remote="aosp"
            sync-j="4" />
 
-  <project name="platform_build" path="build" groups="pdk,tradefed" remote="rro" >
+  <project name="platform_build" path="build" groups="pdk,tradefed" remote="zephyr" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
@@ -27,7 +30,6 @@
   
   <!-- AOSP-OMS -->
   
-  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="rro" />
   <project path="packages/providers/TelephonyProvider" name="platform_packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="rro" />
   <project path="system/bt" name="platform_system_bt" groups="pdk" remote="rro" />
   <project path="packages/providers/MediaProvider" name="platform_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="rro" />
@@ -49,12 +51,9 @@
   <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="rro" />
   <project path="bionic" name="platform_bionic" groups="pdk" remote="rro" />
   <project path="art" name="platform_art" groups="pdk" remote="rro" />
-  <project name="platform_vendor_aosp" path="vendor/aosp" remote="rro" />
-  <project name="manifest" path="manifest" remote="rro" />
   <project path="system/vold" name="platform_system_vold" groups="pdk" remote="rro" />
   <project path="system/extras" name="platform_system_extras" remote="rro" />
   <project path="system/media" name="platform_system_media" remote="rro" />
-  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="rro" />
   <project path="external/f2fs-tools" name="platform_external_f2fs-tools" groups="pdk" remote="rro" />
   <project path="external/ipsec-tools" name="platform_external_ipsec-tools" groups="pdk-cw-fs,pdk-fs" remote="rro" />
   <project path="packages/apps/PhoneCommon" name="platform_packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="rro" />
@@ -129,8 +128,6 @@
   <project path="developers/build" name="platform/developers/build" />
   <project path="developers/demos" name="platform/developers/demos" />
   <project path="developers/samples/android" name="platform/developers/samples/android" />
-  <project path="device/asus/fugu" name="device/asus/fugu" groups="device,fugu,broadcom_pdk" />
-  <project path="device/asus/fugu-kernel" name="device/asus/fugu-kernel" groups="device,fugu,broadcom_pdk" clone-depth="1" />
   <project path="device/common" name="device/common" groups="pdk-cw-fs,pdk-fs" />
   <project path="device/generic/arm64" name="device/generic/arm64" groups="pdk" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
@@ -151,19 +148,6 @@
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
   <project path="device/google/atv" name="device/google/atv" groups="device,fugu,broadcom_pdk,generic_fs" />
   <project path="device/google/contexthub" name="device/google/contexthub" groups="device" />
-  <project path="device/google/dragon" name="device/google/dragon" groups="device,dragon" />
-  <project path="device/google/dragon-kernel" name="device/google/dragon-kernel" groups="device,dragon" clone-depth="1" />
-  <project path="device/htc/flounder" name="device/htc/flounder" groups="device,flounder,broadcom_pdk" />
-  <project path="device/htc/flounder-kernel" name="device/htc/flounder-kernel" groups="device,flounder,broadcom_pdk" clone-depth="1" />
-  <project path="device/huawei/angler" name="device/huawei/angler" groups="device,angler,broadcom_pdk" />
-  <project path="device/huawei/angler-kernel" name="device/huawei/angler-kernel" groups="device,angler,broadcom_pdk" />
-  <project path="device/intel/edison" name="device/intel/edison" groups="device" />
-  <project path="device/lge/bullhead" name="device/lge/bullhead" groups="device,bullhead" />
-  <project path="device/lge/bullhead-kernel" name="device/lge/bullhead-kernel" groups="device,bullhead" />
-  <project path="device/linaro/hikey" name="device/linaro/hikey" />
-  <project path="device/linaro/hikey-kernel" name="device/linaro/hikey-kernel" />
-  <project path="device/moto/shamu" name="device/moto/shamu" groups="device,shamu,broadcom_pdk" />
-  <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu,broadcom_pdk" clone-depth="1" />
   <project path="device/sample" name="device/sample" groups="pdk" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
@@ -614,5 +598,10 @@
 
   <!-- masquerade -->
   <project path="packages/apps/masquerade" name="TeamSubstratum/masquerade" remote="github" revision="master" />
-	
+
+  <!-- Zephyr-OS -->
+  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="zephyr" />	
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="zephyr" />
+  <project name="vendor_zos" path="vendor/zos" remote="zephyr" />
+  <project name="manifest" path="manifest" remote="zephyr" />
 </manifest>
