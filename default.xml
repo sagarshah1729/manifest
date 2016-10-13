@@ -14,7 +14,7 @@
 	   fetch="https://github.com/Zephyr-OS"
            revision="zephyr-N" />
 
-  <default revision="refs/tags/android-7.0.0_r6"
+  <default revision="refs/tags/android-7.0.0_r14"
            remote="aosp"
            sync-j="4" />
 
@@ -119,6 +119,7 @@
   <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" groups="pdk" remote="github" revision="cm-14.0" />
   <project name="CyanogenMod/android_device_qcom_common" path="device/qcom/common" remote="github" revision="cm-14.0" />
   <project name="CyanogenMod/android_external_e2fsprogs" path="external/e2fsprogs" groups="pdk" remote="github" revision="cm-14.0" />
+  <project name="CyanogenMod/android_packages_wallpapers_LivePicker" path="packages/wallpapers/LivePicker" remote="github" revision="cm-14.0" />
   
   <!--AOSP -->
   
