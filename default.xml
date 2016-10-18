@@ -573,6 +573,8 @@
   <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="zephyr" />	
   <project path="bootable/recovery" name="platform_bootable_recovery" remote="zephyr" />
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="zephyr" />
+  <project path="packages/apps/DUI" name="platform_packages_apps_DUI" groups="pdk-fs" remote="zephyr" />
+  <project path="external/DUtils" name="platform_external_DUtils" groups="pdk-fs" remote="zephyr" />
   <project name="vendor_zos" path="vendor/zos" remote="zephyr" />
   <project name="manifest" path="manifest" remote="zephyr" />
 </manifest>
