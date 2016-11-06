@@ -10,8 +10,9 @@
   <remote  name="rro"
            fetch="https://github.com/AOSP-RRO"
 	   revision="nougat" />
+
   <remote  name="zephyr"
-	   fetch="https://github.com/Zephyr-OS"
+           fetch="https://github.com/Zephyr-OS"
            revision="zephyr-N" />
 
   <default revision="refs/tags/android-7.0.0_r14"
