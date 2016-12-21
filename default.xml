@@ -381,7 +381,6 @@
   <project path="build/kati" name="AOSP-JF-MM/platform_build_kati" groups="pdk,tradefed" remote="github" revision="aosp-7.1.1" />
   <project path="art" name="AOSP-JF-MM/platform_art" groups="pdk" remote="github" revision="aosp-7.1.1" />
   <project path="bionic" name="AOSP-JF-MM/platform_bionic" groups="pdk" remote="github" revision="aosp-7.1.1" />
-  <project path="device/qcom/sepolicy" name="AOSP-JF-MM/platform_device_qcom_sepolicy" remote="github" revision="aosp-7.1.1" />
   <project path="device/qcom/common" name="CyanogenMod/android_device_qcom_common" remote="github" revision="cm-14.1" />
   <project path="external/android-clat" name="AOSP-JF-MM/platform_external_android-clat" groups="pdk-cw-fs,pdk-fs" remote="github" revision="aosp-7.1.1" />
   <project path="external/boringssl" name="AOSP-JF-MM/platform_external_boringssl" groups="pdk" remote="github" revision="aosp-7.1.1" />
@@ -549,6 +548,7 @@
   <project name="vendor_zos" path="vendor/zos" remote="zephyr" />
   <project name="manifest" path="manifest" remote="zephyr" />
   <project name="platform_bootable_recovery" path="bootable/recovery" groups="pdk-fs" remote="zephyr" />
+  <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="zephyr" />
 
 </manifest>
 
