@@ -428,7 +428,6 @@
   <project path="packages/services/Telecomm" name="AOSP-JF-MM/platform_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="github" revision="aosp-7.1.1" />
   <project path="packages/services/Telephony" name="AOSP-JF-MM/platform_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="github" revision="aosp-7.1.1" />
   <project path="system/bt" name="AOSP-JF-MM/platform_system_bt" groups="pdk" remote="github" revision="aosp-7.1.1" />
-  <project path="system/core" name="AOSP-JF-MM/platform_system_core" groups="pdk" remote="github" revision="aosp-7.1.1" />
   <project path="system/extras" name="AOSP-JF-MM/platform_system_extras" groups="pdk" remote="github" revision="aosp-7.1.1" />
   <project path="system/media" name="AOSP-JF-MM/platform_system_media" groups="pdk" remote="github" revision="aosp-7.1.1" />
   <project path="system/netd" name="AOSP-JF-MM/platform_system_netd" groups="pdk" remote="github" revision="aosp-7.1.1" />
@@ -549,6 +548,7 @@
   <project name="manifest" path="manifest" remote="zephyr" />
   <project name="platform_bootable_recovery" path="bootable/recovery" groups="pdk-fs" remote="zephyr" />
   <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="zephyr" />
+  <project path="system/core" name="platform_system_core" remote="zephyr" />
 
 </manifest>
 
