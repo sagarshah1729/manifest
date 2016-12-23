@@ -10,12 +10,16 @@
   <remote  name="zephyr"
            fetch="https://github.com/Zephyr-OS"
            revision="zephyr-N" />
+  
+  <remote  name="cosmic-os"
+           fetch="https://github.com/Cosmic-OS"
+           revision="refs/heads/n7.1" />
 
   <default revision="refs/tags/android-7.1.1_r4"
            remote="aosp"
            sync-j="4" />
 
-  <project name="platform_build" path="build" groups="pdk,tradefed" remote="zephyr" >
+  <project name="platform_build" path="build" groups="pdk,tradefed" remote="cosmic-os" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
@@ -299,7 +303,6 @@
   <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" groups="pdk-fs" />
   <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" groups="pdk-fs" />
   <project path="packages/apps/ManagedProvisioning" name="platform/packages/apps/ManagedProvisioning" groups="pdk-fs" />
-  <project path="packages/apps/Messaging" name="platform/packages/apps/Messaging" groups="pdk-fs" />
   <project path="packages/apps/Music" name="platform/packages/apps/Music" groups="pdk-fs" />
   <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" groups="pdk-fs" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" groups="pdk-fs" />
@@ -415,9 +418,6 @@
   <project path="packages/apps/Contacts" name="AOSP-JF-MM/platform_packages_apps_Contacts" groups="pdk-fs" remote="github" revision="aosp-7.1.1" />
   <project path="packages/apps/ContactsCommon" name="AOSP-JF-MM/platform_packages_apps_ContactsCommon" groups="pdk-fs" remote="github" revision="aosp-7.1.1" />
   <project path="packages/apps/DeskClock" name="AOSP-JF-MM/platform_packages_apps_DeskClock" groups="pdk-fs" remote="github" revision="aosp-7.1.1" />
-  <project path="packages/apps/Dialer" name="AOSP-JF-MM/platform_packages_apps_Dialer" groups="pdk-fs" remote="github" revision="aosp-7.1.1" />
-  <project path="packages/apps/Gallery2" name="AOSP-JF-MM/platform_packages_apps_Gallery2" groups="pdk-fs" remote="github" revision="aosp-7.1.1" />
-  <project path="packages/apps/Launcher3" name="AOSP-JF-MM/platform_packages_apps_Launcher3" groups="pdk-fs" remote="github" revision="aosp-7.1.1" />
   <project path="packages/apps/PackageInstaller" name="AOSP-JF-MM/platform_packages_apps_PackageInstaller" groups="pdk-fs" remote="github" revision="aosp-7.1.1" />
   <project path="packages/apps/PhoneCommon" name="AOSP-JF-MM/platform_packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="github" revision="aosp-7.1.1" />
   <project path="packages/apps/Stk" name="AOSP-JF-MM/platform_packages_apps_Stk" groups="apps_stk,pdk-fs" remote="github" revision="aosp-7.1.1" />
@@ -539,16 +539,24 @@
   <project path="prebuilts/ninja/linux-x86" name="platform/prebuilts/ninja/linux-x86" groups="linux,pdk,tradefed" />
   <project path="prebuilts/python/linux-x86/2.7.5" name="platform/prebuilts/python/linux-x86/2.7.5" groups="linux,pdk,pdk-cw-fs,pdk-fs" />
 
-  <!-- Zephyr-OS -->
-  <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="zephyr" />	
-  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="zephyr" />
-  <project path="packages/apps/DUI" name="platform_packages_apps_DUI" groups="pdk-fs" remote="zephyr" />
-  <project path="external/DUtils" name="platform_external_DUtils" groups="pdk-fs" remote="zephyr" />
-  <project name="vendor_zos" path="vendor/zos" remote="zephyr" />
+  <!-- Cosmic-OS -->
+  <project path="frameworks/base" name="sagarshah1729/frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="github" revision="n7.1" />	
+  <project path="packages/apps/Settings" name="sagarshah1729/settings" groups="pdk-fs" remote="github" revision="n7.1" />
+  <project name="platform_vendor_cos" path="vendor/cos" remote="cosmic-os" />
   <project name="manifest" path="manifest" remote="zephyr" />
   <project name="platform_bootable_recovery" path="bootable/recovery" groups="pdk-fs" remote="zephyr" />
   <project path="device/qcom/sepolicy" name="platform_device_qcom_sepolicy" remote="zephyr" />
   <project path="system/core" name="platform_system_core" remote="zephyr" />
-
-</manifest>
+  <project path="packages/apps/OmniSwitch" name="platform_packages_apps_OmniSwitch" groups="pdk-fs" remote="cosmic-os" />
+  <project path="packages/apps/CosmicOTA" name="platform_packages_apps_CosmicOTA" groups="pdk-fs" remote="cosmic-os" />
+  <project path="packages/apps/Messaging" name="platform_packages_apps_Messaging" groups="pdk-fs" remote="cosmic-os" />
+  <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" groups="pdk-fs" remote="cosmic-os" />
+  <project path="packages/apps/Galaxy" name="platform_packages_apps_Galaxy" remote="cosmic-os" />
+  <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" groups="pdk-fs" remote="cosmic-os" />
+  <project path="packages/apps/Gallery2" name="platform_packages_apps_Gallery2" groups="pdk-fs" remote="cosmic-os" />
+  <project path="packages/apps/LockClock" name="platform_packages_apps_LockClock" groups="pdk-fs" remote="cosmic-os" />
+  <project path="packages/apps/SnapdragonCamera" name="platform_packages_apps_SnapdragonCamera" groups="pdk-fs" remote="cosmic-os"/>
+  <project path="vendor/cos/ota" name="platform_vendor_cos_ota"  remote="cosmic-os" />
+  <project path="external/google" name="platform_external_google" groups="pdk-fs" remote="cosmic-os" />
+  </manifest>
 
