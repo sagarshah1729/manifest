@@ -19,7 +19,7 @@
            remote="aosp"
            sync-j="4" />
 
-  <project name="platform_build" path="build" groups="pdk,tradefed" remote="cosmic-os" >
+  <project name="sagarshah1729/cos_build" path="build" groups="pdk,tradefed" remote="github" revision="n7.1" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
@@ -484,7 +484,7 @@
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
   <project path="hardware/libhardware_legacy" name="AOSP-JF-MM/platform_hardware_libhardware_legacy" groups="pdk" remote="github" revision="aosp-7.1.1" />
   <project path="hardware/ril" name="AOSP-JF-MM/platform_hardware_ril" groups="pdk" remote="github" revision="aosp-7.1.1" />
-  <project path="hardware/ril-caf" name="AOSP-JF-MM/platform_hardware_ril" groups="pdk" remote="github" revision="aosp-7.1.1-caf" />
+  <project path="hardware/ril-caf" name="sagarshah1729/ril-caf" groups="pdk" remote="github" revision="n7.1-caf" />
   <project path="hardware/samsung" name="AOSP-JF-MM/android_hardware_samsung" remote="github" revision="aosp-7.1.1" />
 
   <!-- Qualcomm HALs -->
